@@ -32,6 +32,7 @@ import D3Sample from "./c38/D3Sample";
 import DndSample from "./c40/DndSample";
 import ReselectSample from "./c43/ReselectSample";
 import Suspense from "./c44/Suspense";
+import TodoExample from './c45 todo-example/index';
 import "antd/dist/antd.css";
 
 import "./index.css";
@@ -73,6 +74,7 @@ const routeMap = {
   "dnd-sample": DndSample,
   "reselect-sample": ReselectSample,
   suspense: Suspense,
+  'todo-example': TodoExample
 };
 
 class App extends React.PureComponent {
