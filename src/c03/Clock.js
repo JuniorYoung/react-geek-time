@@ -7,18 +7,27 @@ export default class Clock extends React.Component {
     this.state = { date: new Date() };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    console.log('getDerivedStateFromProps()');
+    return null;
+  }
+
   componentDidMount() {
-    console.log("Clock did unmount");
+    console.log("Clock did mount");
     this.timerID = setInterval(() => this.tick(), 1000);
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('getSnapshotBeforeUpdate()');
+  }
+
+  componentDidUpdate() {
+    console.log("Clock did update");
   }
 
   componentWillUnmount() {
     console.log("Clock will unmount");
     clearInterval(this.timerID);
-  }
-
-  componentDidUpdate() {
-    console.log("Clock did update");
   }
 
   tick() {

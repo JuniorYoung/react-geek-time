@@ -5,9 +5,10 @@ import {
   Link
 } from "react-router-dom";
 
-const Topic = ({ match }) => (
-  <h1>Topic {match.params.id}</h1>
-);
+const Topic = (props) => {
+  console.log(props);
+  return (<h1>Topic {props.match.params.id}</h1>);
+};
 
 export default class RouterParams extends React.PureComponent {
   render() {

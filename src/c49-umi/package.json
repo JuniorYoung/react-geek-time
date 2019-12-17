@@ -1,0 +1,19 @@
+{
+  "name": "c49-umi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "umi-plugin-react": "^1.14.6"
+  },
+  "dependencies": {
+    "ant-design-pro": "^2.3.2"
+  }
+}

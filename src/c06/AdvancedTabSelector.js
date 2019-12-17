@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default class AdvancedTabSelector extends PureComponent {
   static propTypes = {
-    value: PropTypes.object,
+    value: PropTypes.string,
     options: PropTypes.array,
     onChange: PropTypes.func,
     children: PropTypes.func

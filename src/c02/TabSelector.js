@@ -23,11 +23,11 @@ export default class TabSelector extends PureComponent {
             <li
               key={opt.value}
               className={`tab-item ${
-                opt.value === this.props.value
+                opt.value === value
                   ? "selected"
                   : ""
               }`}
-              onClick={() => this.props.onChange(opt.value)}
+              onClick={() => onChange(opt.value)}
             >
               {opt.name}
             </li>

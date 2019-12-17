@@ -17,11 +17,14 @@
     "react-scripts": "1.1.4",
     "redux": "4.0.0",
     "redux-logger": "3.0.6",
+    "redux-saga": "^1.0.3",
     "redux-thunk": "2.3.0",
     "reselect": "3.0.1",
     "simple-cache-provider": "0.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^1.6.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

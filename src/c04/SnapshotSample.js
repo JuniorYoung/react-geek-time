@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import "./SnapshotSample.css";
 
 export default class SnapshotSample extends PureComponent {
