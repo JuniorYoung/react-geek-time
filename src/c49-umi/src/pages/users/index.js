@@ -1,10 +1,7 @@
-
-import styles from './index.css';
-
-export default function() {
+export default () => {
   return (
-    <div className={styles.normal}>
-      <h1>Page users</h1>
-    </div>
+    <>
+      Users page
+    </>
   );
 }

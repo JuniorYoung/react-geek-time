@@ -1,10 +1,16 @@
 import React from 'react';
-import { Router as DefaultRouter, Route, Switch } from 'react-router-dom';
+import {
+  Router as DefaultRouter,
+  Route,
+  Switch,
+  StaticRouter,
+} from 'react-router-dom';
 import dynamic from 'umi/dynamic';
 import renderRoutes from 'umi/lib/renderRoutes';
-import history from '@tmp/history';
+import history from '@@/history';
+import { routerRedux } from 'dva';
 
-const Router = DefaultRouter;
+const Router = routerRedux.ConnectedRouter;
 
 const routes = [
   {
@@ -17,51 +23,31 @@ const routes = [
         component: require('../404.js').default,
       },
       {
-        path: '/about',
-        exact: true,
-        component: require('../about.js').default,
-      },
-      {
         path: '/',
         exact: true,
         component: require('../index.js').default,
       },
       {
         path: '/users',
-        exact: false,
-        component: require('../users/_layout.js').default,
-        routes: [
-          {
-            path: '/users',
-            exact: true,
-            component: require('../users/index.js').default,
-          },
-          {
-            path: '/users/:id',
-            exact: true,
-            component: require('../users/$id/index.js').default,
-          },
-          {
-            path: '/users/:id/:year',
-            exact: true,
-            component: require('../users/$id/$year.js').default,
-          },
-          {
-            component: () =>
-              React.createElement(
-                require('D:/NODE/node_global/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
-                  .default,
-                { pagesPath: 'pages', hasRoutesInConfig: false },
-              ),
-          },
-        ],
+        exact: true,
+        component: require('../users/index.js').default,
+      },
+      {
+        path: '/users/models/users',
+        exact: true,
+        component: require('../users/models/users.js').default,
+      },
+      {
+        path: '/users/services/users',
+        exact: true,
+        component: require('../users/services/users.js').default,
       },
       {
         component: () =>
           React.createElement(
-            require('D:/NODE/node_global/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+            require('D:/codes/react-geek-time/src/c49-umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
               .default,
-            { pagesPath: 'pages', hasRoutesInConfig: false },
+            { pagesPath: 'src/pages', hasRoutesInConfig: false },
           ),
       },
     ],
@@ -69,9 +55,9 @@ const routes = [
   {
     component: () =>
       React.createElement(
-        require('D:/NODE/node_global/node_modules/umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
+        require('D:/codes/react-geek-time/src/c49-umi/node_modules/umi-build-dev/lib/plugins/404/NotFound.js')
           .default,
-        { pagesPath: 'pages', hasRoutesInConfig: false },
+        { pagesPath: 'src/pages', hasRoutesInConfig: false },
       ),
   },
 ];
