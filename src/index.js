@@ -42,6 +42,7 @@ import TodoExample from './c45-todo-example/index'
 import StateHook from './c46-hook/stateHook'
 import ReactSaga from './c47-redux-saga/index'
 // import ReactSaga_Async from './c47-redux-saga/async_data'
+import TurnDownDemo from './c52-turndown-demo';
 import "antd/dist/antd.css";
 
 import "./index.css";
@@ -92,6 +93,7 @@ const routeMap = {
   'todo-example': TodoExample,
   'state-hook': StateHook,
   'redux-saga': ReactSaga,
+  'turndown-demo': TurnDownDemo,
   // 'redux-saga-asyncdata': ReactSaga_Async
 };
 

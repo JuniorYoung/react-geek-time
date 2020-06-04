@@ -5,7 +5,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "antd": "3.7.1",
+    "antd": "^3.26.16",
     "axios": "0.18.0",
     "cross-fetch": "^2.2.2",
     "d3": "5.5.0",
@@ -20,7 +20,8 @@
     "redux-saga": "^1.0.3",
     "redux-thunk": "2.3.0",
     "reselect": "3.0.1",
-    "simple-cache-provider": "0.7.0"
+    "simple-cache-provider": "0.7.0",
+    "turndown": "^6.0.0"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^1.6.0"
